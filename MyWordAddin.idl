@@ -1,0 +1,29 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(8789AA77-C75C-474C-8AB0-0CD53E295948),
+	pointer_default(unique)
+]
+interface IConnect : IDispatch
+{
+	HRESULT ButtonClicked([in] IDispatch *ribbtonControl);
+};
+
+[
+	uuid(9CEA336F-7263-4844-BFA2-E6AA3CD316DC),
+	version(1.0)
+]
+library MyWordAddinLib
+{
+	importlib("stdole32.tlb");
+
+	[
+		uuid(91A7F0E2-1235-45FE-AEB1-F3C5D0C20DB1)
+	]
+	coclass MyWordAddin
+	{
+		[default] interface IConnect;
+	};
+};
