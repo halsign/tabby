@@ -1,0 +1,15 @@
+﻿<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+    <ribbon>
+        <tabs>
+            <tab id="Test" label="Test">
+                <group id="TestGroup" label="插件测试">
+                    <button id="NewCustomButton" 
+                        imageMso="WebPagePreview" 
+                        size="large" 
+                        label="测试按钮" 
+                        onAction="ButtonClicked"/>
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
